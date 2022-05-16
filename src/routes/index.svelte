@@ -47,7 +47,7 @@
 	<meta name="description" content="A place to help me keep track of the cheeses I've tried." />
 </svelte:head>
 
-<section class="bg-white  py-8 " />
+<section class="bg-white" />
 
 <section class="flex flex-col md:flex-row">
 	<div class="md:w-2/3 mr-0 md:mr-12">

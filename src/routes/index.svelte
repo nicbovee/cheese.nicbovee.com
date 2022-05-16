@@ -43,12 +43,14 @@
 </script>
 
 <svelte:head>
-	<title>The Okay Wisconsin Cheese List</title>
+	<title>The Incomplete Wisconsin Cheese List</title>
 	<meta name="description" content="A place to help me keep track of the cheeses I've tried." />
 </svelte:head>
 
 <section class="bg-white  py-8 ">
-	<h1 class="text-3xl leading-6 font-medium text-gray-900 pb-4">The Okay Wisconsin Cheese List</h1>
+	<h1 class="text-3xl leading-6 font-medium text-gray-900 pb-4">
+		The Incomplete Wisconsin Cheese List
+	</h1>
 </section>
 
 <section>

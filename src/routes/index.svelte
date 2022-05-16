@@ -6,7 +6,7 @@
 			name: 'Garlic Bread Cheese',
 			manufacturer: 'Carr Valley',
 			type: 'Bread Cheese',
-			notes: `always a winner and probably better than the pizza bread cheese.`
+			notes: `Always a winner and probably better than the pizza bread cheese.`
 		},
 		{
 			name: 'Widmers 6 Year',
@@ -47,43 +47,47 @@
 	<meta name="description" content="A place to help me keep track of the cheeses I've tried." />
 </svelte:head>
 
-<section class="bg-white  py-8 ">
-	<h1 class="text-3xl leading-6 font-medium text-gray-900 pb-4">
-		The Incomplete Wisconsin Cheese List
-	</h1>
-</section>
+<section class="bg-white  py-8 " />
 
-<section>
-	<h2 class="text-xl leading-6 font-medium text-gray-900 my-4">The Cheese</h2>
+<section class="flex flex-col md:flex-row">
+	<div class="md:w-2/3 mr-0 md:mr-12">
+		<h2 class="text-xl leading-6 font-medium text-gray-900 my-4">The Cheese 🧀</h2>
 
-	<ul role="list" class="divide-y divide-gray-200 border-b border-gray-200 ">
-		{#each theCheese as curd}
-			<li class="relative bg-white py-5 px-4 ">
-				<div class="flex justify-between space-x-3">
-					<div class="min-w-0 flex-1">
-						<span class="absolute inset-0" aria-hidden="true" />
-						<p class="text-sm font-medium text-gray-900 truncate">{curd.name}</p>
-						<p class="text-sm text-gray-500 truncate">{curd.type}</p>
+		<ul role="list" class="divide-y divide-gray-200 border-b border-gray-200">
+			{#each theCheese as curd}
+				<li class="relative bg-white py-5 px-4 ">
+					<div class="flex justify-between space-x-3">
+						<div class="min-w-0 flex-1">
+							<span class="absolute inset-0" aria-hidden="true" />
+							<p class="text-sm font-medium text-gray-900 truncate">
+								<span class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500"
+									>{curd.manufacturer}</span
+								>
+								– {curd.name}
+							</p>
+						</div>
 					</div>
-					<time
-						datetime="2021-01-27T16:35"
-						class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">{curd.manufacturer}</time
-					>
-				</div>
-				<div class="mt-1">
-					<p class="line-clamp-2 text-sm text-gray-600">
-						{curd.notes}
-					</p>
-				</div>
-			</li>
-		{/each}
-	</ul>
-</section>
-<section>
-	<h2 class="text-xl leading-6 font-medium text-gray-900 my-4">About</h2>
-	<p>
-		Since 2018, my friends and I have traveled from Colorado to Wisconsin to find the freshest
-		cheese curds. What began as a simple search for the squeak has become a biennial tradition to
-		find the best cheeses in Wisconsin.
-	</p>
+					<div class="mt-1">
+						<p class="line-clamp-2 text-sm text-gray-600">
+							"{curd.notes}"
+						</p>
+					</div>
+					<p class="text-xs text-gray-500 truncate mt-6">{curd.type}</p>
+				</li>
+			{/each}
+		</ul>
+	</div>
+	<aside class="md:w-1/3 bg-slate-100 p-6">
+		<h1 class="text-3xl leading-normal font-medium text-gray-900 pb-4">
+			The <br />Incomplete <br />Wisconsin <br />Cheese List.
+		</h1>
+		<h2 class="text-xl leading-6 font-medium text-gray-900 my-4">Why does this exist?</h2>
+		<p>
+			Since 2018, my friends and I have traveled from Colorado to Wisconsin to find the freshest
+			cheese curds. What began as a simple search for the squeak has become a biennial tradition to
+			find the best cheeses in Wisconsin. On our most recent trip in 2022 I realized that I
+			completely forgot what cheeses I liked and didn't like from our previous visits. That list is
+			here.
+		</p>
+	</aside>
 </section>

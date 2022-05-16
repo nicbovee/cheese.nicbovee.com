@@ -86,8 +86,8 @@
 			Since 2018, my friends and I have traveled from Colorado to Wisconsin to find the freshest
 			cheese curds. What began as a simple search for the squeak has become a biennial tradition to
 			find the best cheeses in Wisconsin. On our most recent trip in 2022 I realized that I
-			completely forgot what cheeses I liked and didn't like from our previous visits. That list is
-			here.
+			completely forgot what cheeses I liked and didn't like from our previous visits. Part of that
+			list is here.
 		</p>
 	</aside>
 </section>

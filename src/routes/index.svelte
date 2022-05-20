@@ -3,6 +3,12 @@
 
 	const theCheese = [
 		{
+			name: 'Butterkase',
+			manufacturer: 'Carr Valley',
+			type: `Cow's milk`,
+			notes: `It really tastes like butter. Probably in my top 10 for Carr Valley.`
+		},
+		{
 			name: 'Garlic Bread Cheese',
 			manufacturer: 'Carr Valley',
 			type: 'Bread Cheese',

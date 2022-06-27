@@ -3,6 +3,12 @@
 
 	const theCheese = [
 		{
+			name: 'Reserve Gouda',
+			manufacturer: 'Carr Valley',
+			type: `Gouda`,
+			notes: `Holy shit. I love this cheese. It's a Gouda with way more flavor than any I've had before and just the right amount of sharpness. This cheese bonks.`
+		},
+		{
 			name: 'Applewood Smoked Cheddar',
 			manufacturer: 'Carr Valley',
 			type: `Cheddar`,

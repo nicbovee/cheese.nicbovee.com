@@ -3,6 +3,12 @@
 
 	const theCheese = [
 		{
+			name: 'Applewood Smoked Cheddar',
+			manufacturer: 'Carr Valley',
+			type: `Cheddar`,
+			notes: `Didn't have as much saltyness as I would like. Applewood smoke flavor was tasty.`
+		},
+		{
 			name: 'Butterkase',
 			manufacturer: 'Carr Valley',
 			type: `Cow's milk`,

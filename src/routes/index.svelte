@@ -3,6 +3,18 @@
 
 	const theCheese = [
 		{
+			name: 'Truffle Gouda',
+			manufacturer: `Marieke Gouda`,
+			type: `Gouda`,
+			notes: `This absolute slammer was one of the few non-Carr cheeses I picked up at the Pike Place knockoff in Milwuakkee. This would be a great alternative to parmasan on pasta or pizza. If you're nutty for truffle like I am, you'll love this buttery gouda with an awesome truffle stank.`
+		},
+		{
+			name: 'Unexpected Cheddar',
+			manufacturer: `Trader Joe's`,
+			type: `Cheddar I didn't see coming`,
+			notes: `I don't know if it's just cause I'm sitting in the river fucking slammed on boat snacks and mezcal but this cheese is fire, reasonably priced, and available at your local TJ's.`
+		},
+		{
 			name: 'Reserve Gouda',
 			manufacturer: 'Carr Valley',
 			type: `Gouda`,

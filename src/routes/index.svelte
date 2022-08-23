@@ -3,6 +3,12 @@
 
 	const theCheese = [
 		{
+			name: 'Cranberry Cheddar',
+			manufacturer: `Carr Valley`,
+			type: `Cheddar`,
+			notes: `It's cheddar... With cranberry.. not sure I'd get it again.`
+		},
+		{
 			name: 'Truffle Gouda',
 			manufacturer: `Marieke Gouda`,
 			type: `Gouda`,

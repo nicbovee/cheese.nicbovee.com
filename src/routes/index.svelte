@@ -31,7 +31,7 @@
 
 <section class="flex flex-col md:flex-row">
 	<div class="md:w-2/3 mr-0 md:mr-12">
-		<h2 class="text-xl leading-6 font-medium text-gray-900 my-4">The Cheese 🧀</h2>
+		<h2 class="text-xl leading-6 font-medium text-gray-900 my-4">The Cheese <span class:mega={isFlipped} class="cheese">🧀<span></h2>
 
 		<ul role="list" class="divide-y divide-gray-200 border-b border-gray-200">
 			{#each theCheese as curd}
@@ -80,5 +80,17 @@
 	.flip {
 		display: block;
 		transform: rotate(180deg)
+	}
+	.cheese {
+	transition: all ease-in-out 4000ms;
+
+	}
+	.mega {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 10000;
+		transform: scale(8);
+		font-size: 5rem;
 	}
 </style>

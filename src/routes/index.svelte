@@ -81,16 +81,16 @@
 		display: block;
 		transform: rotate(180deg)
 	}
-	.cheese {
-	transition: all ease-in-out 4000ms;
+	.cheese {		
+		position: absolute;
 
+z-index: 10000;
+	transition: all ease-in-out 4000ms;
+font-size: 2rem;
 	}
 	.mega {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		z-index: 10000;
-		transform: scale(8);
-		font-size: 5rem;
+
+		transform: scale(20) translateX(2vw) translateY(2vh);
+		
 	}
 </style>

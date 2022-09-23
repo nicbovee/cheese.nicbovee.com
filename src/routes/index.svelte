@@ -1,83 +1,27 @@
 <script context="module" lang="ts">
 	export const prerender = true;
+	import { theCheese } from '$lib/theCheese';
 
-	const theCheese = [
-		{
-			name: 'Cranberry Cheddar',
-			manufacturer: `Carr Valley`,
-			type: `Cheddar`,
-			notes: `It's cheddar... With cranberry.. not sure I'd get it again.`
-		},
-		{
-			name: 'Truffle Gouda',
-			manufacturer: `Marieke Gouda`,
-			type: `Gouda`,
-			notes: `This absolute slammer was one of the few non-Carr cheeses I picked up at the Pike Place knockoff in Milwuakkee. This would be a great alternative to parmasan on pasta or pizza. If you're nutty for truffle like I am, you'll love this buttery gouda with an awesome truffle stank.`
-		},
-		{
-			name: 'Unexpected Cheddar',
-			manufacturer: `Trader Joe's`,
-			type: `Cheddar I didn't see coming`,
-			notes: `I don't know if it's just cause I'm sitting in the river fucking slammed on boat snacks and mezcal but this cheese is fire, reasonably priced, and available at your local TJ's.`
-		},
-		{
-			name: 'Reserve Gouda',
-			manufacturer: 'Carr Valley',
-			type: `Gouda`,
-			notes: `Holy shit. I love this cheese. It's a Gouda with way more flavor than any I've had before and just the right amount of sharpness. This cheese bonks.`
-		},
-		{
-			name: 'Applewood Smoked Cheddar',
-			manufacturer: 'Carr Valley',
-			type: `Cheddar`,
-			notes: `Didn't have as much saltyness as I would like. Applewood smoke flavor was tasty.`
-		},
-		{
-			name: 'Butterkase',
-			manufacturer: 'Carr Valley',
-			type: `Cow's milk`,
-			notes: `It really tastes like butter. Probably in my top 10 for Carr Valley.`
-		},
-		{
-			name: 'Garlic Bread Cheese',
-			manufacturer: 'Carr Valley',
-			type: 'Bread Cheese',
-			notes: `Always a winner and probably better than the pizza bread cheese.`
-		},
-		{
-			name: 'Widmers 6 Year',
-			manufacturer: 'Widmers',
-			type: 'Cheddar',
-			notes: `Good price per pound for aged cheddar. Good flavor and not to sharp.`
-		},
-		{
-			name: '12 Year Cheddar',
-			manufacturer: 'Carr Valley',
-			type: 'Cheddar',
-			notes: `Probably not worth the price. It's kind of past the point of sharpness that is pleasant. Glad to have tried it, and would get a smaller brick of it in the future.`
-		},
-		{
-			name: '5 Year Cheddar',
-			manufacturer: 'Hooks',
-			type: 'Cheddar',
-			notes:
-				'I would definitely like to try hooks other cheeses after trying this one. It tasted about as sharp as Carr valley, but somehow I felt like the flavor was better.'
-		},
-		{
-			name: 'Porto Duet',
-			manufacturer: 'Carr Valley',
-			type: 'Sheep Milk',
-			notes: 'More wine flavor than expected but I think everyone who tried it seemed to enjoy it.'
-		},
-		{
-			name: '3 Year Reserve Cheddar',
-			manufacturer: 'Deer Creek',
-			type: 'Cheddar',
-			notes: 'This was a white cheddar that was the perfect amount of sharpness.'
-		}
-	];
+
 </script>
+<script>
+	import Layout from "./__layout.svelte";
 
+	let clickCount = 0;
+	let isFlipped = false;
+
+	function toggleFlip(){
+		if(clickCount <= 3){
+			clickCount++
+		} else {
+			clickCount = 0;
+			isFlipped = !isFlipped;
+		}
+	}
+
+	let words = "";
+
+</script>
 <svelte:head>
 	<title>The Incomplete Wisconsin Cheese List</title>
 	<meta name="description" content="A place to help me keep track of the cheeses I've tried." />
@@ -105,7 +49,7 @@
 					</div>
 					<div class="mt-1">
 						<p class="line-clamp-2 text-sm text-gray-600">
-							"{curd.notes}"
+							 "{curd.notes}"
 						</p>
 					</div>
 					<p class="text-xs text-gray-500 truncate mt-6">{curd.type}</p>
@@ -113,11 +57,12 @@
 			{/each}
 		</ul>
 	</div>
-	<aside class="md:w-1/3 bg-slate-100 p-6">
+	<aside  on:click={toggleFlip} class=" md:w-1/3 bg-slate-100 p-6">
+	<div  class:flip={isFlipped} class="transition-ease">
 		<h1 class="text-3xl leading-normal font-medium text-gray-900 pb-4">
 			The <br />Incomplete <br />Wisconsin <br />Cheese List.
 		</h1>
-		<h2 class="text-xl leading-6 font-medium text-gray-900 my-4">Why does this exist?</h2>
+		<h2 class="text-red text-xl leading-6 font-medium text-gray-900 my-4">Why does this exist?</h2>
 		<p>
 			Since 2018, my friends and I have traveled from Colorado to Wisconsin to find the freshest
 			cheese curds. What began as a simple search for the squeak has become a biennial tradition to
@@ -125,5 +70,15 @@
 			completely forgot what cheeses I liked and didn't like from our previous visits. Part of that
 			list is here.
 		</p>
+	</div>
 	</aside>
 </section>
+<style>
+	.transition-ease {
+		transition: all ease-in-out 1000ms;
+	}
+	.flip {
+		display: block;
+		transform: rotate(180deg)
+	}
+</style>

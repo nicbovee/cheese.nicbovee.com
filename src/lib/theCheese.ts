@@ -9,7 +9,7 @@ export const theCheese = [
   {
 		name: 'Tomato Basil Cheese Curds',
 		manufacturer: `Swiss Family`,
-		type: `Mixed Milk`,
+		type: `Cheddar`,
 		notes: `As I'm standing in line for apple dougnuts at the Sunrise Orchards I noticed these curds and really wanted to try them. Although I do drive all the way to Wisconsin for them every two years, I wouldn't say that cheese curds are my favorite things in the world and a lot of that has to do with the simplicity of them. So when I saw that there were flavored curds out there I had to try even though they weren't from our beloved Carr Valley. Sadly, the tomato basil really doesn't come through on these and I think if I could do it again I'd skip these and bring home an extra bag of Carr's.`,
 		author: 'Nic B.'
 	},

@@ -1,9 +1,9 @@
 export const theCheese = [
 	{
-		name: 'Chipotle Cheddar',
+		name: 'Canaria',
 		manufacturer: `Carr Valley Creamery`,
-		type: `Cheddar`,
-		notes: `A delightful cheddar with a hint of heat. The smooth creamy cheddar flavor provides the perfect backdrop for a smoky chipotle infusion. No complaints here. Goes great with water crackers. `,
+		type: `Mixed Milk`,
+		notes: `A goat, sheep, and cow milk cheese with a wonderfully delicate nutty flavor. The package says it has a fruity flavor, but my I don't detect that whatsoever. Cheese has a very smooth texture and stands up well to cutting. The flavor is strong, but easily muddled. Tastes fine with a cracker, but really shines on its own.`,
 		author: 'Dakotah R.'
 	},
 	{
